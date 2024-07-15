@@ -1,0 +1,39 @@
+### LOGS ###
+core/logs/
+
+### PLUGINS NPM ###
+node_modules
+
+### GERAIS (SO) ###
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+.DS_Store
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+*.log
+.vscode
+
+# Ignorar arquivos :Zone.Identifier
+**/*.Identifier

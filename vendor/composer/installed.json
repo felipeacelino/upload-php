@@ -1,0 +1,45 @@
+[
+    {
+        "name": "verot/class.upload.php",
+        "version": "2.1.6",
+        "version_normalized": "2.1.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/verot/class.upload.php.git",
+            "reference": "724a3ee4ea6579f97fa556caf91a27c3c4100289"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/verot/class.upload.php/zipball/724a3ee4ea6579f97fa556caf91a27c3c4100289",
+            "reference": "724a3ee4ea6579f97fa556caf91a27c3c4100289",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3"
+        },
+        "time": "2023-12-06T23:03:55+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/class.upload.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0-only"
+        ],
+        "authors": [
+            {
+                "name": "Colin Verot",
+                "email": "colin@verot.net"
+            }
+        ],
+        "description": "This PHP class uploads files and manipulates images very easily.",
+        "homepage": "http://www.verot.net/php_class_upload.htm",
+        "keywords": [
+            "gd",
+            "upload"
+        ]
+    }
+]

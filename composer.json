@@ -1,0 +1,12 @@
+{
+    "name": "felipe/uptest",
+    "authors": [
+        {
+            "name": "Felipe Acelino",
+            "email": "felipeacelino@hotmail.com.br"
+        }
+    ],
+    "require": {
+        "verot/class.upload.php": "^2.1"
+    }
+}
