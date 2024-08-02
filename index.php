@@ -8,7 +8,9 @@
 <body>
 
 <form enctype="multipart/form-data" method="post" action="upload.php">
-  <input type="file" size="32" name="image_field" value="">
+  <!-- <input type="file" size="32" name="arquivo" value=""> -->
+  <input type="file" size="32" name="fotos" value="">
+  <!-- <input type="file" size="32" name="fotos[]" value="" multiple> -->
   <input type="submit" name="Submit" value="upload">
 </form>
 

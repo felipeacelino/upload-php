@@ -4,41 +4,48 @@ require_once(VENDOR_PATH . "/autoload.php");
 
 require_once("FileUpload.class.php");
 
-$paramName = 'image_field';
+ini_set('display_errors', 1);
+ini_set('display_startup_erros', 1);
+error_reporting(E_ALL);
+
+$paramName = 'fotos';
 $uploadCfg = [
   'path' => UP_PATH,
+  'allowed_files' => ['jpg','jpeg','png','webp','gif'],
   'max_file_size' => 1,
-  'max_width' => 2000,
+  //'max_width' => 2000,
   'safe_name' => false,
-  'resize' => true,
-  'width' => 250,
-  'height' => 250,
-  'resize_mode' => 'crop',
+  'resize' => false,
+  'width' => 0,
+  'height' => 0,
+  'resize_mode' => '',
+  'thumbs' => [
+    [
+      'width' => 500,
+      'height' => 0,
+      'resize_mode' => 'auto',
+    ],
+    [
+      'width' => 150,
+      'height' => 150,
+      'resize_mode' => 'crop',
+    ]
+  ],
 ];
 $fileUpload = new FileUpload($uploadCfg);
 
+$paramName2 = 'arquivo';
+$uploadCfg2 = [
+  'path' => UP_PATH,
+  'allowed_files' => ['pdf','txt'],
+  'max_file_size' => 10,
+  'safe_name' => true,
+];
+$fileUpload2 = new FileUpload($uploadCfg2);
+
 echo "<pre>";
 print_r($fileUpload->imageUpload($_FILES[$paramName]));
+//print_r($fileUpload->imageUploadMultiple($paramName));
+//print_r($fileUpload2->fileUpload($_FILES[$paramName2]));
 echo "</pre>";
 exit();
-
-/* 
-use Verot\Upload\Upload;
-
-$handle = new Upload($_FILES['image_field']);
-if ($handle->uploaded) {
-  //$handle->file_new_name_body   = 'image_resized';
-  $handle->webp_quality = 90;
-  $handle->jpeg_quality = 90;
-  $handle->image_convert = 'jpg';
-  //$handle->image_resize         = true;
-  //$handle->image_x              = 250;
-  //$handle->image_ratio_y        = true;
-  $handle->process(UP_PATH);
-  if ($handle->processed) {
-    echo 'success!';
-    $handle->clean();
-  } else {
-    echo 'error : ' . $handle->error;
-  }
-} */
